@@ -83,6 +83,34 @@
     transform: scale(1); /* Remove o zoom no mobile */
   }
 }
+#ads2 {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: red;
+  color: #fff;
+  padding: 30px 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  max-width: 250px;
+  z-index: 1000;
+  transform: scale(1.1); /* Corrigido: ponto e vírgula */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* 📱 Estilo responsivo para dispositivos com largura de até 600px */
+@media (max-width: 600px) {
+  #ads2 {
+    left: 10px;
+    bottom: 10px;
+    padding: 20px 30px;
+    font-size: 12px;
+    max-width: 90%;
+    transform: scale(1); /* Remove o zoom no mobile */
+  }
+}
+
 
 
   </style>
@@ -94,6 +122,10 @@
         ANUNCIAMOS SUA EMPRESA VALOR FIXO 3MILR$
         WHATSAPP 27 99986-0405 OU SMS 
         <a href="https://wa.me/5527999860405" target="_blank">Chamar no WhatsApp</a>
+
+    </div>
+    <div id="ads2">
+        SUA PROPAGANDA AQUI!
 
     </div>
     <h1>Portal Capixaba</h1>
