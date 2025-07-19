@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="As últimas fofocas e novidades do mundo dos famosos. Atualizações em tempo real sobre celebridades, reality shows e bastidores da TV." />
+  <title>Fofoca Capixaba - Tudo sobre os Famosos</title>
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fef1f6;
+  color: #333;
+}
+
+header {
+  background-color: #d81b60;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+  background-color: #ad1457;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.noticia {
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.noticia h2 {
+  color: #d81b60;
+  margin-bottom: 0.5rem;
+}
+
+.noticia small {
+  color: #666;
+}
+
+footer {
+  background-color: #ad1457;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Anúncios fixos */
+#ads, #ads2 {
+  position: fixed;
+  background-color: #e91e63;
+  color: #fff;
+  padding: 30px 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  max-width: 250px;
+  z-index: 1000;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#ads {
+  bottom: 20px;
+  right: 20px;
+}
+
+#ads2 {
+  bottom: 100px; /* distância acima do primeiro anúncio */
+  left: 20px;
+}
+
+/* Estilos responsivos para mobile */
+@media (max-width: 600px) {
+  #ads {
+    bottom: 10px;
+    right: 10px;
+    padding: 20px 30px;
+    font-size: 12px;
+    max-width: 90%;
+    transform: scale(1);
+  }
+
+  #ads2 {
+    bottom: 80px; /* ainda acima do primeiro, mas ajustado */
+    left: 10px;
+    padding: 20px 30px;
+    font-size: 12px;
+    max-width: 90%;
+    transform: scale(1);
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div id="ads">
+      ANUNCIE SUA LOJA DE MODA OU COSMÉTICOS AQUI!  
+      WHATSAPP 27 99986-0405  
+      <a href="https://wa.me/5527999860405" target="_blank" style="color: #fff; text-decoration: underline;">Chamar no WhatsApp</a>
+    </div>
+    <div id="ads2">
+      SUA MARCA NA BOCA DO POVO!
+    </div>
+    <h1>Fofoca Capixaba</h1>
+    <p>Babados, famosos e tudo que acontece nos bastidores</p>
+  </header>
+
+  <nav>
+    <a href="#celebridades">Celebridades</a>
+    <a href="#tv">TV & Reality</a>
+    <a href="#moda">Moda</a>
+  </nav>
+
+  <div class="container" id="noticias-container">
+    <!-- Fofocas inseridas via JavaScript -->
+  </div>
+
+  <footer>
+    <p>&copy; Fofoca Capixaba - Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const fofocas = [
+      {
+        cidade: "Celebridades",
+        titulo: "Ex-BBB é flagrada com novo affair em praia do ES",
+        conteudo: "A ex-BBB Julinha foi vista em clima de romance com um empresário capixaba na Praia da Costa. Os dois trocaram carinhos e curtiram o fim de tarde juntos.",
+        data: "2025-07-18"
+      },
+      {
+        cidade: "TV & Reality",
+        titulo: "Novo reality promete agitar as noites da TV",
+        conteudo: "A emissora anunciou a estreia de 'A Ilha Secreta', um novo reality show que mistura provas físicas, convivência e muito drama. Estreia prevista para agosto.",
+        data: "2025-07-17"
+      },
+      {
+        cidade: "Moda",
+        titulo: "Influencer capixaba lança coleção de roupas com pegada sustentável",
+        conteudo: "A blogueira e empresária Lari Gomes lançou uma nova linha de roupas em parceria com uma marca local. A coleção é 100% ecológica.",
+        data: "2025-07-16"
+      },
+      {
+        cidade: "Celebridades",
+        titulo: "Cantora pop se apresenta de surpresa em boate de Vitória",
+        conteudo: "A cantora Lunna fez um show surpresa na noite de quarta-feira na boate Club Vix, deixando os fãs em êxtase.",
+        data: "2025-07-15"
+      }
+    ];
+
+    const container = document.getElementById('noticias-container');
+
+    fofocas.forEach(fofoca => {
+      const article = document.createElement('article');
+      article.className = 'noticia';
+
+      article.innerHTML = `
+        <h2>${fofoca.titulo}</h2>
+        <small>${fofoca.cidade} - ${new Date(fofoca.data).toLocaleDateString('pt-BR')}</small>
+        <p>${fofoca.conteudo}</p>
+      `;
+
+      container.appendChild(article);
+    });
+  </script>
+
+</body>
+</html>
